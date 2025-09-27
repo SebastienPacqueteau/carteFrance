@@ -151,14 +151,14 @@ function parcoursDepartement(svg, objListeDept, fillRule, clipRule, fill, stroke
   for (const dept in objListeDept) {
     if (Array.isArray(objListeDept[dept])){
       objListeDept[dept].forEach((item, i) => {
-        if (deptementsSelectionnes && deptementsSelectionnes == dept){
+        if (deptementsSelectionnes && deptementsSelectionnes.includes(dept)){
             svg.appendChild(creerPath(dept, fillRule, clipRule, couleurDeptementsSelectionnes, stroke, strokeOpacity,objListeDept[dept][i]));
         }else{
           svg.appendChild(creerPath(dept, fillRule, clipRule, fill, stroke, strokeOpacity,objListeDept[dept][i]));
         }
       });
     }else{
-      if (deptementsSelectionnes && deptementsSelectionnes == dept){
+      if (deptementsSelectionnes && deptementsSelectionnes.includes(dept)){
         svg.appendChild(creerPath(dept, fillRule, clipRule, couleurDeptementsSelectionnes, stroke, strokeOpacity,objListeDept[dept]));
       }else{
         svg.appendChild(creerPath(dept, fillRule, clipRule, fill, stroke, strokeOpacity,objListeDept[dept]));
