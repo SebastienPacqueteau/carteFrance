@@ -175,6 +175,13 @@ function creerPath(id, fillRule, clipRule, fill, stroke, strokeOpacity,d) {
   balisePath.setAttribute("fill", fill);
   balisePath.setAttribute("stroke", stroke);
   balisePath.setAttribute("stroke-opacity", strokeOpacity);
+
+  // InfoBulle 
+  balisePath.setAttribute("data-bs-toggle", "tooltip");
+  balisePath.setAttribute("data-bs-placement", "right");
+  balisePath.setAttribute("data-bs-html", "true");
+  balisePath.setAttribute("title", `Départements ${id.split("departement")[1]}`);
+
   balisePath.setAttribute("d", d);
   return balisePath;
 }
