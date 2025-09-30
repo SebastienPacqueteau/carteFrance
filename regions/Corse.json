@@ -1,0 +1,14 @@
+{
+	"Corse": {
+  		"2A": {
+  			"nom": "Corse-du-Sud",
+  			"path": [],
+        "polygone": []
+  		},
+  		"2B": {
+  			"nom": "Haute-Corse",
+  			"path": [],
+        "polygone": []
+  		}
+	}
+}
